@@ -1,0 +1,64 @@
+
+.tweet-container{
+  position: relative;
+  border: 1px solid grey;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #80808040;
+  
+}
+.tweet-container:hover{
+  
+  box-shadow: 4px 3px 4px #dccdcd;
+
+}
+.tweet-container .userinfo{
+  padding: 15px 10px;
+}
+.tweet-container .user-name{
+  
+  font-size: 1em;
+}
+.tweet-container .user-id{
+  position: absolute;
+  left: 90%;
+  color: #80808075;
+}
+
+.tweet-container textarea{
+  width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #80808047;
+    font-size: 19px;
+    font-weight: bold;
+    color: #5f5c5c;
+    resize: none;
+    padding: 5px 10px;
+}
+.tweet-container textarea:focus-visible{
+  outline: none !important;
+}
+
+.tweet-container .postedtime{
+  font-size: 16px;
+  padding-left: 10px;
+}
+.tweet-container .tweetericons{
+  position: absolute;
+  left:90%;
+}
+
+.tweetericons .fas{
+  padding-left: 12px;
+  font-size: 20px;
+}
+.tweet-container .fa-flag:hover{
+  color:#4155a1;
+}
+.tweet-container  .fa-heart:hover{
+  color: #e21818;
+}
+.tweet-container .fa-retweet:hover{
+  color: #ecb104;
+}
