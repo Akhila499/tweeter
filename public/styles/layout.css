@@ -18,7 +18,22 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
+nav{
+  font-family: 'Bungee', cursive;
+ 
+}
+.downheader{
+  width: 100%;
+  padding: 0 5%;
+}
+.downheader h6{
+  font-weight: 500;
+  font-size: 24px;
+  margin: 1em 0;
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

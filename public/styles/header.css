@@ -1,0 +1,14 @@
+header {
+  text-align: center;
+  background: #f9f4eafa;
+}
+header .back{
+  background-image: url(../images/arabesque.png);
+}
+
+.back h2{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0 10px 20px;
+}

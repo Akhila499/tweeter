@@ -1,0 +1,31 @@
+.new-tweet form textarea{
+  background: transparent;
+  border-color: transparent transparent black;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  width: 100%;
+  margin: 0px;
+  height: 72px;
+  resize: none;
+  height: 50px;
+  line-height: initial;
+}
+
+.new-tweet form textarea:focus-visible{
+  outline: none !important;
+  /* height: 50px;
+  line-height: initial; */
+}
+
+.new-tweet form button{
+  font-family: 'Bungee';
+  background: #4155a1;
+  color: #fff;
+  border: 1px solid #4155a1;
+  margin: 5px 0;
+}
+
+.new-tweet form output {
+  float: right;
+    font-family: 'Bungee';
+}
