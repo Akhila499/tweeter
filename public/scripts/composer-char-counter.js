@@ -1,22 +1,8 @@
 $(document).ready(function() {
+  
   // --- our code goes here ---
   //Below function is to stop default behaviour of browser to redirect the page when clicked submit button.
-  $( "#tweet-form" ).on('submit',function() {
-    event.preventDefault();
-    $postdata = $(this).serialize();
-    $url = $(this).attr('action');
-    console.log($(this).serialize());
-    
-    $.ajax({
-      type: 'POST',
-      url: $url,
-      data:$postdata,
-      success: function(data){
-        console.log(data);
-      }
-
-    });
-  });
+  
 
   //code for checking the char count entered in the textarea and changing the color if it exists limit.
   $( "#tweet-text" ).on('input',function() {
@@ -29,7 +15,7 @@ $(document).ready(function() {
     } else {
       totalcount.css({'color': 'grey'})
     }
-
+    
   });
 
 
