@@ -68,3 +68,20 @@
   color: #ecb104;
 }
 
+
+.isa_error, .isa_notinlimit {
+  display: none;
+  color: #D8000C;
+  background-color: #FFD2D2;
+}
+.isa_success {
+  display: none;
+  color: #4F8A10;
+  background-color: #DFF2BF;
+}
+.isa_notinlimit i, .isa_error i, .isa_success i {
+  margin:10px 22px;
+  font-size:2em;
+  vertical-align:middle;
+}
+

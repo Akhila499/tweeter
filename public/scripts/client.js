@@ -16,7 +16,11 @@ $(document).ready(function() {
       $('#tweet-container-id').prepend($temp);
     }
   };
-
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   const createTweetElement = function(tweet) {
   
     let username = tweet.user.name;
@@ -34,7 +38,9 @@ $(document).ready(function() {
     const $tweet = `
           <article>
             <div class="userinfo"><img src='${useravatars}'/> <span class="user-name">${username}</span><span class='user-id'>${userid}</span></div>
-            <textarea name="text" id="" placeholder="">${textareaText}</textarea>
+            
+            <p>${escape(textareaText)}</p>
+            
             <div>
               <span class="postedtime">${timeout}</span> 
               <span class='tweetericons'>
@@ -66,11 +72,37 @@ $(document).ready(function() {
     //checking whether the input is empty or null or longer than the 140 charectors
     let validationInput = $( "#tweet-text" ).val();
     if(!validationInput){
-      return alert('Input is invalid');
+     //display if error
+      $('.isa_error').css({'display':'block'});
+
+      // hide error message after 3 sec 
+      setTimeout(function() {
+          $('.isa_error').css({'display':'none'});
+      }, 3000);
+      return 
     }
     if(validationInput.length > 140){
-      return alert('Input is too long');
+      //display if error
+      $('isa_notinlimit').css({'display':'block'});
+
+      // hide error message after 3 sec 
+      setTimeout(function() {
+          $('.isa_notinlimit').css({'display':'none'});
+      }, 3000);
+      return 
     }
+      
+    if(validationInput){
+        //display if success
+      $('isa_success').css({'display':'block'});
+
+      // hide error message after 3 sec 
+      setTimeout(function() {
+          $('isa_success').css({'display':'none'});
+      }, 3000);
+
+    }
+    
     
 
     $url = $(this).attr('action');
@@ -83,9 +115,12 @@ $(document).ready(function() {
       success: function(data){
         //console.log('inside ajax',data);
         loadTweets(data);
+        
       }
-
+      
     });
+    //empty the post 
+    $('#tweet-text').val('');
   });
   loadTweets();
 });
