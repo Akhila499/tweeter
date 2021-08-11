@@ -12,6 +12,11 @@
   box-shadow: 4px 3px 4px #dccdcd;
 
 }
+.tweet-container article{
+  border: 1px solid #80808047;
+    padding: 10px;
+    margin: 5px;
+}
 .tweet-container .userinfo{
   padding: 15px 10px;
 }
@@ -62,3 +67,4 @@
 .tweet-container .fa-retweet:hover{
   color: #ecb104;
 }
+
