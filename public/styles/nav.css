@@ -1,12 +1,12 @@
 nav{
-
-  background: #4056A1;
+  /* background: #4056A1; */
   color: #fff;
   padding: 1.6em;
 }
 
 nav span{
   font-family: 'Bungee', cursive;
+  font-size: 1.5em;
 }
 
 nav .disinline{
@@ -21,6 +21,9 @@ nav .disinline .rightside{
 .fa-angle-double-down{
   position: absolute;
   left: 45%;
-  color:#ea4141;;
+  
+  font-size: .9em;
+
 }
+
 

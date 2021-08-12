@@ -17,15 +17,20 @@
   line-height: initial; */
 }
 
-.new-tweet form button{
-  font-family: 'Bungee';
-  background: #4155a1;
-  color: #fff;
-  border: 1px solid #4155a1;
-  margin: 5px 0;
-}
+
 
 .new-tweet form output {
   float: right;
     font-family: 'Bungee';
+}
+
+.bttn-fill.bttn-primary{
+  background-color: #4155a1;
+  font-family: 'Bungee';
+  padding: 1% 2.5%;
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+.bttn-fill.bttn-primary:focus, .bttn-fill.bttn-primary:hover{
+  color: #4155a1;
 }

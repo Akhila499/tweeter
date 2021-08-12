@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css" integrity="sha512-/2285SnGiTHjSKBkJzedsJ8wwSP0j74ZQyusMQ9j5Z1RtyKqZ3XtfS8hVp8OadLs2uq+8V6/n+CyqUNTO/UpYg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Font-Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -41,8 +42,9 @@
       <div class="disinline">
         <span>tweeter page</span>
       </div>
-      <div class="disinline">
-        <span class="rightside"><b>Write</b> a new Tweet <br/> <i class="fas fa-angle-double-down"></i></span>
+      <div class="disinline" >
+        <span class="rightside"><button id="newtweetclick"><b>Write</b> a new Tweet <br/> <i class="fas fa-angle-double-down">
+        </i></button></span>
         <span></span>
       </div>
       
@@ -52,7 +54,7 @@
         <div>
             <img src="/images/profile-hex.png"> 
         </div>
-        <br>
+       
         <div>
             <h2><b>Akhila</b> Thota</h2>
         </div>
@@ -61,19 +63,22 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container downheader">
-      <div>
+      <!-- <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing  </p>
         <hr/>
         <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h6>
-      </div>
+      </div> -->
       <!-- Posting tweet -->
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+      <section class="new-tweet" id="newtweetshow">
+        <!-- <h2>Compose Tweet</h2> -->
         <form action='/tweets/' method='POST' id='tweet-form'>
+          <br/>
+          <br/>
           <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" placeholder="Enter here...."></textarea>
+          <textarea name="text" id="tweet-text" placeholder=""></textarea>
           <div>
-            <button type="submit">Tweet</button>
+            <button type="submit" class="bttn-fill bttn-md bttn-primary">Tweet</button>
+            
             <output name="counter" class="counter" for="tweet-text" >140</output>
           </div>
         </form>
@@ -90,7 +95,7 @@
           Posted successfully
         </div>
       </section>
-      <div style="height:50px;"></div>
+      <div style="height:1em;"></div>
       <!-- Tweet view -->
       <section class="tweet-container" id='tweet-container-id'> 
         <!-- <article>

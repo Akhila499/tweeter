@@ -1,21 +1,27 @@
 
 .tweet-container{
   position: relative;
-  border: 1px solid grey;
+  margin-top: 1.4em;
+  /* border: 1px solid grey;
   padding: 15px;
   background-color: #fff;
-  border: 1px solid #80808040;
+  border: 1px solid #80808040; */
   
 }
 .tweet-container:hover{
   
-  box-shadow: 4px 3px 4px #dccdcd;
+  /* box-shadow: 4px 3px 4px #dccdcd; */
 
 }
 .tweet-container article{
   border: 1px solid #80808047;
-    padding: 10px;
-    margin: 5px;
+    padding: 1em;
+    /* margin: 5px; */
+    background-color: #fff;
+    margin-bottom: .5em;
+}
+.tweet-container article:hover{
+  box-shadow: 4px 3px 4px #dccdcd;
 }
 .tweet-container .userinfo{
   padding: 15px 10px;
@@ -26,7 +32,7 @@
 }
 .tweet-container .user-id{
   position: absolute;
-  left: 90%;
+  left: 74%;
   color: #80808075;
 }
 
@@ -51,15 +57,15 @@
 }
 .tweet-container .tweetericons{
   position: absolute;
-  left:90%;
+  left:80%;
 }
 
 .tweetericons .fas{
-  padding-left: 12px;
-  font-size: 20px;
+  padding-left: 1em;
+  font-size: 0.8em;
 }
 .tweet-container .fa-flag:hover{
-  color:#4155a1;
+  color:#5674e6;
 }
 .tweet-container  .fa-heart:hover{
   color: #e21818;
@@ -85,3 +91,37 @@
   vertical-align:middle;
 }
 
+#newtweetclick{
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+}
+#newtweetshow{
+  display: none;
+  margin-top: 1.2em;
+}
+article p{
+  border-bottom: 1px solid #80808047;
+  padding: 1%;
+  margin: 1% 0;
+  font-size: 0.8em;
+    font-weight: 600;
+}
+
+.fa-angle-double-down{
+  animation: updown 800ms infinite alternate;
+}
+  
+  @keyframes updown { 
+  0%{
+  transform: translate(0px,8px);
+  }
+  100%{
+  transform: translate(0px,0px);
+  }
+}
+#tweet-form label{
+  font-size: 1em;
+  font-weight: 600;
+}

@@ -4,13 +4,17 @@ header {
 
 }
 header .back{
-  background-image: url(../images/arabesque.png);
-  margin-top: 60px;
+  /* background-image: url(../images/arabesque.png); */
+  margin-top: 3.8em;
+  background-color: rgb(213 86 114);
+  
+  padding-top: 5%;
 }
 
 .back h2{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: inherit;
   margin: 0;
-  padding: 0 10px 20px;
+  padding: 10px 10px 20px;
+  color: rgb(113 5 29);
 }
