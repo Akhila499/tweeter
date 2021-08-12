@@ -1,29 +1,26 @@
-nav{
+nav {
   /* background: #4056A1; */
   color: #fff;
   padding: 1.6em;
 }
 
-nav span{
-  font-family: 'Bungee', cursive;
+nav span {
+  font-family: "Bungee", cursive;
   font-size: 1.5em;
 }
 
-nav .disinline{
+nav .disinline {
   display: inline;
 }
-nav .disinline .rightside{
-  font-family: 'Source Sans Pro', sans-serif;
-  float:right;
+
+nav .disinline .rightside {
+  font-family: "Source Sans Pro", sans-serif;
+  float: right;
   position: relative;
 }
 
-.fa-angle-double-down{
+.fa-angle-double-down {
   position: absolute;
   left: 45%;
-  
-  font-size: .9em;
-
+  font-size: 0.9em;
 }
-
-

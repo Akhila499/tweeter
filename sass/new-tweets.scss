@@ -1,4 +1,4 @@
-.new-tweet form textarea {
+.new-tweet form textarea{
   background: transparent;
   border-color: transparent transparent black;
   border-bottom-width: 1px;
@@ -11,25 +11,26 @@
   line-height: initial;
 }
 
-.new-tweet form textarea:focus-visible {
+.new-tweet form textarea:focus-visible{
   outline: none !important;
   /* height: 50px;
   line-height: initial; */
 }
 
+
+
 .new-tweet form output {
   float: right;
-  font-family: "Bungee";
+    font-family: 'Bungee';
 }
 
-.bttn-fill.bttn-primary {
+.bttn-fill.bttn-primary{
   background-color: #4155a1;
-  font-family: "Bungee";
+  font-family: 'Bungee';
   padding: 1% 2.5%;
   margin: 5px 0;
   font-size: 1.1em;
 }
-
-.bttn-fill.bttn-primary:focus, .bttn-fill.bttn-primary:hover {
+.bttn-fill.bttn-primary:focus, .bttn-fill.bttn-primary:hover{
   color: #4155a1;
 }

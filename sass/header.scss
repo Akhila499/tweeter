@@ -1,19 +1,20 @@
 header {
   text-align: center;
   background: #f5f5f5;
-}
 
-header .back {
+}
+header .back{
   /* background-image: url(../images/arabesque.png); */
   margin-top: 3.8em;
-  background-color: #d55672;
+  background-color: rgb(213 86 114);
+  
   padding-top: 5%;
 }
 
-.back h2 {
-  font-family: "Source Sans Pro", sans-serif;
+.back h2{
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: inherit;
   margin: 0;
   padding: 10px 10px 20px;
-  color: #fff;
+  color: #fff
 }

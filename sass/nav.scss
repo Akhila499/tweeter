@@ -1,0 +1,29 @@
+nav{
+  /* background: #4056A1; */
+  color: #fff;
+  padding: 1.6em;
+}
+
+nav span{
+  font-family: 'Bungee', cursive;
+  font-size: 1.5em;
+}
+
+nav .disinline{
+  display: inline;
+}
+nav .disinline .rightside{
+  font-family: 'Source Sans Pro', sans-serif;
+  float:right;
+  position: relative;
+}
+
+.fa-angle-double-down{
+  position: absolute;
+  left: 45%;
+  
+  font-size: .9em;
+
+}
+
+

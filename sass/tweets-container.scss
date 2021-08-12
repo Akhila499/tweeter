@@ -1,136 +1,127 @@
-.tweet-container {
+
+.tweet-container{
   position: relative;
   margin-top: 1.4em;
   /* border: 1px solid grey;
   padding: 15px;
   background-color: #fff;
   border: 1px solid #80808040; */
+  
 }
-
-.tweet-container:hover {
+.tweet-container:hover{
+  
   /* box-shadow: 4px 3px 4px #dccdcd; */
-}
 
-.tweet-container article {
+}
+.tweet-container article{
   border: 1px solid #80808047;
-  padding: 1em;
-  /* margin: 5px; */
-  background-color: #fff;
-  margin-bottom: 0.5em;
+    padding: 1em;
+    /* margin: 5px; */
+    background-color: #fff;
+    margin-bottom: .5em;
 }
-
-.tweet-container article:hover {
+.tweet-container article:hover{
   box-shadow: 4px 3px 4px #dccdcd;
 }
-
-.tweet-container .userinfo {
+.tweet-container .userinfo{
   padding: 15px 10px;
 }
-
-.tweet-container .user-name {
+.tweet-container .user-name{
+  
   font-size: 1em;
 }
-
-.tweet-container .user-id {
+.tweet-container .user-id{
   position: absolute;
   left: 74%;
   color: #80808075;
 }
 
-.tweet-container textarea {
+.tweet-container textarea{
   width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #80808047;
-  font-size: 19px;
-  font-weight: bold;
-  color: #5f5c5c;
-  resize: none;
-  padding: 5px 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #80808047;
+    font-size: 19px;
+    font-weight: bold;
+    color: #5f5c5c;
+    resize: none;
+    padding: 5px 10px;
 }
-
-.tweet-container textarea:focus-visible {
+.tweet-container textarea:focus-visible{
   outline: none !important;
 }
 
-.tweet-container .postedtime {
+.tweet-container .postedtime{
   font-size: 16px;
   padding-left: 10px;
 }
-
-.tweet-container .tweetericons {
+.tweet-container .tweetericons{
   position: absolute;
-  left: 80%;
+  left:80%;
 }
 
-.tweetericons .fas {
+.tweetericons .fas{
   padding-left: 1em;
   font-size: 0.8em;
 }
-
-.tweet-container .fa-flag:hover {
-  color: #5674e6;
+.tweet-container .fa-flag:hover{
+  color:#5674e6;
 }
-
-.tweet-container .fa-heart:hover {
+.tweet-container  .fa-heart:hover{
   color: #e21818;
 }
-
-.tweet-container .fa-retweet:hover {
+.tweet-container .fa-retweet:hover{
   color: #ecb104;
 }
+
 
 .isa_error, .isa_notinlimit {
   display: none;
   color: #D8000C;
   background-color: #FFD2D2;
 }
-
 .isa_success {
   display: none;
   color: #4F8A10;
   background-color: #DFF2BF;
 }
-
 .isa_notinlimit i, .isa_error i, .isa_success i {
-  margin: 10px 22px;
-  font-size: 2em;
-  vertical-align: middle;
+  margin:10px 22px;
+  font-size:2em;
+  vertical-align:middle;
 }
 
-#newtweetclick {
+#newtweetclick{
   background: transparent;
   border: none;
   color: #fff;
   font-size: 1em;
 }
-
-#newtweetshow {
+#newtweetshow{
   /* display: none; */
   margin-top: 1.2em;
 }
-
-article p {
+article p{
   border-bottom: 1px solid #80808047;
   padding: 1%;
   margin: 1% 0;
   font-size: 0.8em;
-  font-weight: 600;
+    font-weight: 600;
 }
 
-.fa-angle-double-down {
+.fa-angle-double-down{
   animation: updown 800ms infinite alternate;
 }
-
-@keyframes updown {
-  0% {
-    transform: translate(0px, 8px);
+  
+  @keyframes updown { 
+  0%{
+  transform: translate(0px,8px);
   }
-  100% {
-    transform: translate(0px, 0px);
+  100%{
+  transform: translate(0px,0px);
   }
 }
-#tweet-form label {
+#tweet-form label{
   font-size: 1em;
   font-weight: 600;
 }
