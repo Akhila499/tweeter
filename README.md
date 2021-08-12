@@ -7,8 +7,9 @@ This project is build upon using HTML, CSS, JS, jQuery and AJAX front-end skills
 
 ## Screenshots of the project
 
-![Tweeter-home page]()
-![Tweeter-home page in mobile view]()
+![Tweeter-home page](https://github.com/Akhila499/tweeter/blob/master/docs/Tweeter-home-page.png)
+![Tweeter-home page with clicking the new post button](https://github.com/Akhila499/tweeter/blob/master/docs/Tweeter-home-page-with-tweet-box.png)
+![Tweeter-home page in mobile view](https://github.com/Akhila499/tweeter/blob/master/docs/Mobile-view-for-tweeter.png)
 
 ## Getting Started
 
