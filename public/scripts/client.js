@@ -9,7 +9,7 @@ $(document).ready(function() {
   //loadTweets();
   const renderTweets = function(tweets) {
   // loops through tweets
-    for(let tweet of tweets){
+    for(let tweet of tweets) {
       // calls createTweetElement for each tweet
       let $temp = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
@@ -38,9 +38,7 @@ $(document).ready(function() {
     const $tweet = `
           <article>
             <div class="userinfo"><img src='${useravatars}'/> <span class="user-name">${username}</span><span class='user-id'>${userid}</span></div>
-            
             <p>${escape(textareaText)}</p>
-            
             <div>
               <span class="postedtime">${timeout}</span> 
               <span class='tweetericons'>
@@ -54,72 +52,63 @@ $(document).ready(function() {
   
   //loading tweets from localhost:8080/tweets/
   
-  const loadTweets = function(){
-
+  const loadTweets = function() {
     const url = `http://localhost:8080/tweets`;
-
     $.ajax(url, { method: 'GET' })
-    .then(function (data) {
-      renderTweets(data);
-    });
-    
+      .then(function (data) {
+        renderTweets(data);
+      });
   };
-  $( "#tweet-form" ).on('submit',function(event) {
+
+  $("#tweet-form").on('submit',function(event) {
     $postdata = $(this).serialize();
     console.log($postdata);
     event.preventDefault();
     
     //checking whether the input is empty or null or longer than the 140 charectors
-    let validationInput = $( "#tweet-text" ).val();
-    if(!validationInput){
-     //display if error
+    let validationInput = $("#tweet-text").val();
+    if (!validationInput) {
+      //display if error
       $('.isa_error').css({'display':'block'});
 
-      // hide error message after 3 sec 
+      // hide error message after 3 sec
       setTimeout(function() {
-          $('.isa_error').css({'display':'none'});
+        $('.isa_error').css({'display':'none'});
       }, 3000);
-      return 
+      return
     }
-    if(validationInput.length > 140){
+    if (validationInput.length > 140) {
       //display if error
       $('isa_notinlimit').css({'display':'block'});
-
-      // hide error message after 3 sec 
+      // hide error message after 3 sec
       setTimeout(function() {
-          $('.isa_notinlimit').css({'display':'none'});
+        $('.isa_notinlimit').css({'display':'none'});
       }, 3000);
-      return 
+      return
     }
       
-    if(validationInput){
-        //display if success
+    if (validationInput) {
+      //display if success
       $('isa_success').css({'display':'block'});
-
-      // hide error message after 3 sec 
+      // hide error message after 3 sec
       setTimeout(function() {
-          $('isa_success').css({'display':'none'});
+        $('isa_success').css({'display':'none'});
       }, 3000);
-
     }
     
     
 
     $url = $(this).attr('action');
-    //console.log($(this).serialize());
-    
+
     $.ajax({
       type: 'POST',
       url: $url,
       data:$postdata,
-      success: function(data){
-        //console.log('inside ajax',data);
+      success: function(data) {
         loadTweets(data);
-        
       }
-      
     });
-    //empty the post 
+    //empty the post
     $('#tweet-text').val('');
   });
   loadTweets();

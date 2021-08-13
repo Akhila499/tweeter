@@ -3,8 +3,10 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+ /* tablet breakpoint is minimum width of 320px and max 420px */
 @media only screen and (min-width: 320p) and (max-width: 420px) {
-  /* Write CSS rules that target small laptop screen sizes and beyond */
+  
   body {
     font-size: 15px;
     flex-direction: column;
@@ -24,9 +26,9 @@
     color: #71051e;
   }
 }
-/* Another tablet breakpoint is minimum width of 768px */
+/* Another tablet breakpoint is minimum width of 420px and max 768px */
 @media only screen and (min-width: 420px) and (max-width: 768px) {
-  /* Write CSS rules that target small laptop screen sizes and beyond */
+  
   body {
     font-size: 14px;
     flex-direction: column;
@@ -35,7 +37,6 @@
   .downheader {
     width: 100%;
     padding: 0 3%;
-    /* margin: 0 6%; */
   }
 
   nav {
@@ -46,9 +47,9 @@
     color: #71051e;
   }
 }
-/* Laptops / Desktops: minimum width of 1024px */
+/* Laptops / Desktops: minimum width of 768px and max 960px */
 @media only screen and (min-width: 768px) and (max-width: 960px) {
-  /* Write CSS rules that target small laptop screen sizes and beyond */
+  
   body {
     font-size: 20px;
     flex-direction: column;
@@ -61,7 +62,7 @@
   .downheader {
     width: 100%;
     padding: 0 3%;
-    /* margin: 0 6%; */
+    
   }
 
   nav {
@@ -72,27 +73,23 @@
     color: #71051e;
   }
 }
-/* Laptops / Desktops: minimum width of 960px */
+/* Laptops / Desktops: minimum width of 960px an max 1024px*/
 @media only screen and (min-width: 960px) and (max-width: 1024px) {
-  /* Write CSS rules that target small laptop screen sizes and beyond */
   body {
     font-size: 20px;
   }
-
   .downheader {
     width: 100%;
     padding: 0 3%;
-    /* margin: 0 6%; */
   }
-
   nav {
     background: #d55672;
   }
-
   .fa-angle-double-down {
     color: #71051e;
   }
 }
+/* morethan 1024 screen */
 @media only screen and (min-width: 1024px) {
   body {
     color: #545149;
@@ -123,6 +120,7 @@
     color: #e63232;
   }
 }
+
 html {
   box-sizing: border-box;
 }
@@ -146,19 +144,9 @@ nav {
   z-index: 1;
 }
 
-/* .downheader{
-  width: 100%;
-  padding: 0 5%;
-
-} */
 .downheader h6 {
   font-weight: 500;
   font-size: 20px;
   margin: 1em 0;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-/* Smartphones: minimum width of 320px to maximum width of around 420px */
-/* Another smartphone breakpoint is maximum width of around 420px */

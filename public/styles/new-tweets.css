@@ -13,8 +13,6 @@
 
 .new-tweet form textarea:focus-visible {
   outline: none !important;
-  /* height: 50px;
-  line-height: initial; */
 }
 
 .new-tweet form output {

@@ -1,20 +1,11 @@
 .tweet-container {
   position: relative;
   margin-top: 1.4em;
-  /* border: 1px solid grey;
-  padding: 15px;
-  background-color: #fff;
-  border: 1px solid #80808040; */
-}
-
-.tweet-container:hover {
-  /* box-shadow: 4px 3px 4px #dccdcd; */
 }
 
 .tweet-container article {
   border: 1px solid #80808047;
   padding: 1em;
-  /* margin: 5px; */
   background-color: #fff;
   margin-bottom: 0.5em;
 }
@@ -106,7 +97,6 @@
 }
 
 #newtweetshow {
-  /* display: none; */
   margin-top: 1.2em;
 }
 

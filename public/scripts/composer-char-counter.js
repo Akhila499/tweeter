@@ -21,9 +21,5 @@ $(document).ready(function() {
   $("#newtweetclick").click(function(){
     $('#newtweetshow').slideToggle('slow');
   });
-
-  // $( "#tweet-text" ).blur(function() {
-  //   console.log('blur', event);
-  // });
  
 });
