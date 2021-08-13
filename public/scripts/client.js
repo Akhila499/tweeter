@@ -29,12 +29,7 @@ $(document).ready(function() {
     let textareaText = tweet.content.text;
     let timeOfPost = tweet.created_at;
     let timeout = timeago.format(timeOfPost);
-    // const date1 = new Date();
-    // const date2 = new Date(timeOfPost);
-    // const diffTime = Math.abs(date2 - date1);
-    // const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-    //console.log(diffTime + " milliseconds");
-    //console.log(diffDays + " days");
+
     const $tweet = `
           <article>
             <div class="userinfo"><img src='${useravatars}'/> <span class="user-name">${username}</span><span class='user-id'>${userid}</span></div>
@@ -70,7 +65,6 @@ $(document).ready(function() {
     if (!validationInput) {
       //display if error
       $('.isa_error').css({'display':'block'});
-
       // hide error message after 3 sec
       setTimeout(function() {
         $('.isa_error').css({'display':'none'});
@@ -79,7 +73,7 @@ $(document).ready(function() {
     }
     if (validationInput.length > 140) {
       //display if error
-      $('isa_notinlimit').css({'display':'block'});
+      $('.isa_notinlimit').css({'display':'block'});
       // hide error message after 3 sec
       setTimeout(function() {
         $('.isa_notinlimit').css({'display':'none'});
@@ -106,10 +100,19 @@ $(document).ready(function() {
       data:$postdata,
       success: function(data) {
         loadTweets(data);
+        //empty the post
+        $('#tweet-text').val('');
       }
     });
-    //empty the post
-    $('#tweet-text').val('');
+    
   });
   loadTweets();
+  // /scroll back up
+  $(".scroll-top").click(function() {
+    $("html, body").animate({ 
+        scrollTop: 0 
+    }, "slow");
+    return false;
+  });
+  
 });
