@@ -18,7 +18,6 @@ $(document).ready(function() {
   loadTweets();
   
   const renderTweets = function(tweets) {
-  // loops through tweets
     $('#tweet-container-id').empty();
     for(let tweet of tweets) {
       // calls createTweetElement for each tweet
@@ -34,12 +33,12 @@ $(document).ready(function() {
   };
   const createTweetElement = function(tweet) {
   
-    let username = tweet.user.name;
-    let useravatars = tweet.user.avatars;
-    let userid = tweet.user.handle;
-    let textareaText = tweet.content.text;
-    let timeOfPost = tweet.created_at;
-    let timeout = timeago.format(timeOfPost);
+    const username = tweet.user.name;
+    const useravatars = tweet.user.avatars;
+    const userid = tweet.user.handle;
+    const textareaText = tweet.content.text;
+    const timeOfPost = tweet.created_at;
+    const timeout = timeago.format(timeOfPost);
 
     const $tweet = `
           <article>
