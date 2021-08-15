@@ -6,9 +6,20 @@
 //import * as timeago from 'timeago.js';
 
 $(document).ready(function() {
-  //loadTweets();
+  
+  //loading tweets from localhost:8080/tweets/
+  const loadTweets = function() {
+    const url = `http://localhost:8080/tweets`;
+    $.ajax(url, { method: 'GET' })
+      .then(function (data) {
+        renderTweets(data);
+      });
+  };
+  loadTweets();
+  
   const renderTweets = function(tweets) {
   // loops through tweets
+    $('#tweet-container-id').empty();
     for(let tweet of tweets) {
       // calls createTweetElement for each tweet
       let $temp = createTweetElement(tweet);
@@ -45,19 +56,11 @@ $(document).ready(function() {
     return $tweet;
   };
   
-  //loading tweets from localhost:8080/tweets/
   
-  const loadTweets = function() {
-    const url = `http://localhost:8080/tweets`;
-    $.ajax(url, { method: 'GET' })
-      .then(function (data) {
-        renderTweets(data);
-      });
-  };
-
   $("#tweet-form").on('submit',function(event) {
     $postdata = $(this).serialize();
     console.log($postdata);
+    
     event.preventDefault();
     
     //checking whether the input is empty or null or longer than the 140 charectors
@@ -83,10 +86,10 @@ $(document).ready(function() {
       
     if (validationInput) {
       //display if success
-      $('isa_success').css({'display':'block'});
+      $('.isa_success').css({'display':'block'});
       // hide error message after 3 sec
       setTimeout(function() {
-        $('isa_success').css({'display':'none'});
+        $('.isa_success').css({'display':'none'});
       }, 3000);
     }
     
@@ -102,11 +105,13 @@ $(document).ready(function() {
         loadTweets(data);
         //empty the post
         $('#tweet-text').val('');
+        $(".counter").val(140);
+
       }
     });
     
   });
-  loadTweets();
+  
   // /scroll back up
   $(".scroll-top").click(function() {
     $("html, body").animate({ 
